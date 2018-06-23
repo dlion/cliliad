@@ -159,8 +159,8 @@ func TestPageScraper(t *testing.T) {
 		t.Errorf("No sms key are found on the result map")
 	}
 
-	if sms != "0" {
-		t.Errorf("The sms value is not 0 but %s", sms)
+	if sms != "0 SMS" {
+		t.Errorf("The sms value is not 0 SMS but %s", sms)
 	}
 
 	data, ok = got["data"]
@@ -168,8 +168,8 @@ func TestPageScraper(t *testing.T) {
 		t.Errorf("No data key are found on the result map")
 	}
 
-	if data != "62,76MB / 30GB" {
-		t.Errorf("The data value is not 62,76MB / 30GB but %s", data)
+	if data != "62,76MB" {
+		t.Errorf("The data value is not 62,76MB but %s", data)
 	}
 
 	mms, ok = got["mms"]
