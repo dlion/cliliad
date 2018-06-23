@@ -72,3 +72,112 @@ func TestReadResponse(t *testing.T) {
 	}
 
 }
+
+func TestPageScraper(t *testing.T) {
+	htmlTest := `
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8">
+    <title>Benvenuto in iliad</title>
+  </head>
+  <body>
+    <div class="remodal-bg">
+      <div id="container" canvas="container">
+        <div id="page-container">
+	  <div class="page-container main">
+	    <div class="page-content">
+	      <div class="page p-conso">
+	        <h2>
+		  <span class="bold">Offerta iliad</span> - Credito : <b class="red">0.00€</b>
+		  <div class="toggle-conso">
+		    <a href="#" data-target="local" class="selected">In Italia</a>
+		    <a href="#" data-target="roaming">Estero</a>
+		  </div>
+		</h2>
+		<div class="conso-infos conso-local">
+		  <div class="grid-l conso__grid">
+		    <div class="grid-c w-4 w-tablet-4">
+		      <div class="conso__content">
+		        <div class="conso__text">
+			Chiamate: <span class="red">0s</span><br>
+			Consumi voce: <span class="red">0.00€</span>
+		      </div>
+		    </div>
+		  </div>
+		  <div class="grid-c w-4 w-tablet-4">
+		    <div class="conso__content">
+		      <div class="conso__text"><span class="red">0 SMS</span><br>
+		      SMS extra: <span class="red">0.00€</span>
+		    </div>
+		  </div>
+		</div>
+		<div class="grid-l conso__grid">
+		  <div class="grid-c w-4 w-tablet-4">
+		    <div class="conso__content">
+		      <div class="conso__text">
+		        <span class="red">62,76MB</span> / 30GB<br>
+			Consumi Dati: <span class="red">0.00€</span>
+		      </div>
+		    </div>
+		  <div class="grid-c w-4 w-tablet-4">
+		    <div class="conso__content">
+		      <div class="conso__text">
+		        <span class="red">0 MMS<br></span>
+			Consumi MMS: <span class="red">0.00€</span>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+	      </div>
+            </div>
+	  </div>
+	</div>
+      </div>
+    </div>
+  </div>
+  </body>
+</html>`
+	var calls, sms, data, mms string
+
+	got, err := pageScraper(htmlTest)
+	if err != nil {
+		t.Error(err)
+	}
+
+	calls, ok := got["calls"]
+	if !ok {
+		t.Errorf("No calls key are found on the result map")
+	}
+
+	if calls != "0s" {
+		t.Errorf("The calls value is not 0s but %s", calls)
+	}
+
+	sms, ok = got["sms"]
+	if !ok {
+		t.Errorf("No sms key are found on the result map")
+	}
+
+	if sms != "0" {
+		t.Errorf("The sms value is not 0 but %s", sms)
+	}
+
+	data, ok = got["data"]
+	if !ok {
+		t.Errorf("No data key are found on the result map")
+	}
+
+	if data != "62,76MB / 30GB" {
+		t.Errorf("The data value is not 62,76MB / 30GB but %s", data)
+	}
+
+	mms, ok = got["mms"]
+	if !ok {
+		t.Errorf("No mms key are found on the result map")
+	}
+
+	if mms != "0 MMS" {
+		t.Errorf("The mms value is not 0 MMS but %s", mms)
+	}
+}
