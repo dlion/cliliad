@@ -15,6 +15,18 @@ func main() {
 		"sms": func() (cli.Command, error) {
 			return &command.Sms{}, nil
 		},
+		"mms": func() (cli.Command, error) {
+			return &command.Mms{}, nil
+		},
+		"calls": func() (cli.Command, error) {
+			return &command.Calls{}, nil
+		},
+		"data": func() (cli.Command, error) {
+			return &command.Data{}, nil
+		},
+		"all": func() (cli.Command, error) {
+			return &command.All{}, nil
+		},
 	}
 
 	status, err := app.Run()

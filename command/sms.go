@@ -1,21 +1,27 @@
 package command
 
-import "fmt"
+import (
+	"fmt"
+
+	emoji "gopkg.in/kyokomi/emoji.v1"
+)
 
 type Sms struct{}
 
-func (h *Sms) Help() string {
+func (s *Sms) Help() string {
 	return "Returns the number of the SMS sent"
 }
 
-func (h *Sms) Run(args []string) int {
-	result, err := Init()
+func (s *Sms) Run(args []string) int {
+	result, err := startFunction()
 	if err != nil {
+		fmt.Printf("Error to extract the sms value: %v\n", err)
+		return -1
 	}
-	fmt.Printf("✉️   %s\n", result["sms"])
+	emoji.Printf(":envelope: %s ", result["sms"])
 	return 0
 }
 
-func (h *Sms) Synopsis() string {
-	return h.Help()
+func (s *Sms) Synopsis() string {
+	return s.Help()
 }
