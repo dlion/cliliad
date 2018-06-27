@@ -34,9 +34,17 @@
   unused-packages = true
 
 [[constraint]]
-  branch = "master"
-  name = "github.com/mitchellh/cli"
-
-[[constraint]]
   name = "gopkg.in/kyokomi/emoji.v1"
   version = "1.5.1"
+
+[[constraint]]
+  name = "github.com/fatih/color"
+  version = "1.7.0"
+
+[[constraint]]
+  name = "github.com/spf13/viper"
+  version = "1.0.2"
+
+[[constraint]]
+  branch = "master"
+  name = "github.com/mitchellh/go-homedir"
