@@ -3,15 +3,8 @@
 A CLI tools to check your stats from Iliad website
 
 ## Build
-Install [dep](https://github.com/golang/dep)
 
-`git clone https://github.com/dlion/cliliad`
-
-`cd cliliad`
-
-`dep ensure`
-
-`go build`
+`go get -u github.com/DLion/cliliad`
 
 ## Configuration
 
