@@ -2,7 +2,7 @@
 
 A CLI tools to check your stats from Iliad website
 
-## Build
+## Installation
 
 `go get -u github.com/DLion/cliliad`
 
