@@ -20,7 +20,7 @@ Put a `.cliliad.json` file in your `$HOME` dir
 ## Usage
 
 ```
-/cliliad -help
+cliliad -help
 
           oooo   o8o  oooo   o8o                  .o8
           '888   '"'  '888   '"'                 "888
@@ -31,7 +31,7 @@ d88' '"Y8  888  '888   888  '888  'P  )88b  d88' '888
 'Y8bod8P' o888o o888o o888o o888o 'Y888""8o 'Y8bod88P"
 
 
-Usage of ./cliliad:
+Usage of cliliad:
   -calls
         Returns the time of the calls done
   -data
@@ -44,7 +44,7 @@ Usage of ./cliliad:
 
 Retrieve all stats:
 ```
-./cliliad
+cliliad
 
           oooo   o8o  oooo   o8o                  .o8
           '888   '"'  '888   '"'                 "888
