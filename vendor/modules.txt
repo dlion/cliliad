@@ -1,0 +1,54 @@
+# github.com/PuerkitoBio/goquery v1.4.1
+github.com/PuerkitoBio/goquery
+# github.com/andybalholm/cascadia v1.0.0
+github.com/andybalholm/cascadia
+# github.com/fatih/color v1.7.0
+github.com/fatih/color
+# github.com/fsnotify/fsnotify v1.4.7
+github.com/fsnotify/fsnotify
+# github.com/hashicorp/hcl v0.0.0-20180404174102-ef8a98b0bbce
+github.com/hashicorp/hcl
+github.com/hashicorp/hcl/hcl/printer
+github.com/hashicorp/hcl/hcl/ast
+github.com/hashicorp/hcl/hcl/parser
+github.com/hashicorp/hcl/hcl/token
+github.com/hashicorp/hcl/json/parser
+github.com/hashicorp/hcl/hcl/scanner
+github.com/hashicorp/hcl/hcl/strconv
+github.com/hashicorp/hcl/json/scanner
+github.com/hashicorp/hcl/json/token
+# github.com/magiconair/properties v1.8.0
+github.com/magiconair/properties
+# github.com/mattn/go-colorable v0.0.9
+github.com/mattn/go-colorable
+# github.com/mattn/go-isatty v0.0.3
+github.com/mattn/go-isatty
+# github.com/mitchellh/go-homedir v0.0.0-20180523094522-3864e76763d9
+github.com/mitchellh/go-homedir
+# github.com/mitchellh/mapstructure v0.0.0-20180511142126-bb74f1db0675
+github.com/mitchellh/mapstructure
+# github.com/pelletier/go-toml v1.2.0
+github.com/pelletier/go-toml
+# github.com/spf13/afero v1.1.1
+github.com/spf13/afero
+github.com/spf13/afero/mem
+# github.com/spf13/cast v1.2.0
+github.com/spf13/cast
+# github.com/spf13/jwalterweatherman v0.0.0-20180109140146-7c0cea34c8ec
+github.com/spf13/jwalterweatherman
+# github.com/spf13/pflag v1.0.1
+github.com/spf13/pflag
+# github.com/spf13/viper v1.0.2
+github.com/spf13/viper
+# golang.org/x/net v0.0.0-20180621144259-afe8f62b1d6b
+golang.org/x/net/html
+golang.org/x/net/html/atom
+# golang.org/x/sys v0.0.0-20180626155939-c4afb3effaa5
+golang.org/x/sys/unix
+# golang.org/x/text v0.3.0
+golang.org/x/text/transform
+golang.org/x/text/unicode/norm
+# gopkg.in/kyokomi/emoji.v1 v1.5.1
+gopkg.in/kyokomi/emoji.v1
+# gopkg.in/yaml.v2 v2.2.1
+gopkg.in/yaml.v2
